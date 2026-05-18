@@ -648,9 +648,9 @@ async function ladeTermine() {
 
     list.innerHTML = termine.map(t => {
       const linkHtml = t.linkUrl
-        ? `<span>➤ <a href="${t.linkUrl}" target="_blank" rel="noopener">${t.linkText || 'Mehr Info'}</a></span>`
+        ? ` · <a href="${t.linkUrl}" target="_blank" rel="noopener">${t.linkText || 'Mehr Info'}</a>`
         : '';
-      const ortHtml = t.ort ? `<span>${t.ort}</span>` : '';
+      const ortHtml = t.ort ? `<span>${t.ort}${linkHtml}</span>` : '';
       return `<li>
           <div class="termin-date">
             <span class="td-day">${t.tag}</span>
@@ -659,7 +659,6 @@ async function ladeTermine() {
           <div class="termin-info">
             <strong>${t.titel}</strong>
             ${ortHtml}
-            ${linkHtml}
           </div>
         </li>`;
     }).join('\n');
