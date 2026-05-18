@@ -486,19 +486,16 @@ footer a:hover { color: #fff; }
         <ul class="contact-list">
           <li>
             <span class="cl-label">Ansprechperson</span>
-            <!-- ✏️ -->
             <span class="cl-val">Werner Käferlein</span>
           </li>
           <li>
             <span class="cl-label">Telefon</span>
-            <!-- ✏️ -->
-            <span class="cl-val">[0XXXX XXXXXX]</span>
+            <span class="cl-val">09102-1498</span>
           </li>
           <li>
             <span class="cl-label">E-Mail</span>
             <span class="cl-val" style="font-weight:400;font-size:0.84rem;">
-              <!-- ✏️ -->
-              <a href="mailto:info@sg-langenzenn-wilhermsdorf.de">info@sg-langenz…de</a>
+              <a id="mail-link-wk" href="#"/>
             </span>
           </li>
           <li>
@@ -543,6 +540,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
+(function(){
+  const u = 'werner.kaeferlein', d = 't-online.de';
+  const a = document.getElementById('mail-link-wk');
+  if (a) {
+    a.href = 'mailto:' + u + '@' + d;
+    a.textContent = u + '@' + d;
+  }
+})();
 
 // Termine aus CSV laden
 const MONATE = ['Januar','Februar','März','April','Mai','Juni',
