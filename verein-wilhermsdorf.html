@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schachfreunde Wilhermsdorf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #f8f6f2;
+  --white:     #ffffff;
+  --text:      #1e1c1a;
+  --muted:     #5a5650;
+  --border:    #ddd9d3;
+  --accent:    #2a5c8a;
+  --accent-light: #e8f0f7;
+  --gold:      #8a6a2a;
+  --radius:    6px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+header {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 3px solid var(--gold);
+}
+
+.header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-icon { flex-shrink: 0; width: 36px; height: 36px; border-radius: 3px; overflow: hidden; }
+
+.site-title-text { display: flex; flex-direction: column; }
+
+.site-title .name {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.site-title .sub {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+.back-link:hover { color: #fff; }
+
+.page-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
+}
+
+.section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.55rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title svg { flex-shrink: 0; opacity: 0.65; }
+
+.section p { color: var(--muted); margin-bottom: 0.75rem; }
+.section p:last-child { margin-bottom: 0; }
+.section a { color: var(--accent); }
+
+.info-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.info-table tr { border-bottom: 1px solid var(--border); }
+.info-table tr:last-child { border-bottom: none; }
+.info-table td { padding: 0.6rem 0; vertical-align: top; font-size: 0.95rem; }
+.info-table td:first-child {
+  color: var(--muted);
+  width: 130px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+}
+.info-table td strong { display: block; color: var(--text); font-weight: 600; }
+.info-table td span { font-size: 0.88rem; color: var(--muted); }
+
+footer {
+  background: #2a2724;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+footer a:hover { color: #fff; }
+
+@media (max-width: 680px) {
+  .page-wrap { padding: 1rem; }
+  .header-inner { padding: 0 1rem; }
+  .section { padding: 1.1rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="site-title">
+      <div class="logo-icon" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0"  y="0"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="9"  y="0"  width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="18" y="0"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="27" y="0"  width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="0"  y="9"  width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="9"  y="9"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="18" y="9"  width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="27" y="9"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="0"  y="18" width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="9"  y="18" width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="18" y="18" width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="27" y="18" width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="0"  y="27" width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="9"  y="27" width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+          <rect x="18" y="27" width="9" height="9" fill="rgba(255,255,255,0.18)"/>
+          <rect x="27" y="27" width="9" height="9" fill="rgba(255,255,255,0.85)"/>
+        </svg>
+      </div>
+      <div class="site-title-text">
+        <span class="name">Schachfreunde Wilhermsdorf</span>
+        <span class="sub">Teil der SG Langenzenn / Wilhermsdorf</span>
+      </div>
+    </a>
+    <a href="index.html" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zur Hauptseite
+    </a>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <div class="section" id="verein">
+    <h2 class="section-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Schachfreunde Wilhermsdorf
+    </h2>
+    <p>
+      Die Schachfreunde Wilhermsdorf stehen für das Schachspiel im Markt Wilhermsdorf
+      und der Umgebung. Der Verein ist Heimat des wöchentlichen Spielabends, der jeden
+      Freitag ab 19:30 Uhr stattfindet.
+    </p>
+    <p>
+      <!-- ✏️ VEREINSGESCHICHTE / WEITERE INFOS EINTRAGEN -->
+      [Hier können weitere Informationen zur Geschichte und zum Vereinsleben eingetragen werden.]
+    </p>
+
+    <table class="info-table">
+      <tr>
+        <td>Gegründet</td>
+        <td>
+          <!-- ✏️ -->
+          <strong>[Gründungsjahr eintragen]</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Sitz</td>
+        <td>
+          <strong>Wilhermsdorf</strong>
+          <span>Landkreis Fürth, Bayern</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Mitglieder</td>
+        <td>
+          <!-- ✏️ -->
+          <strong>[Anzahl eintragen]</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Jahresbeitrag</td>
+        <td>
+          <!-- ✏️ -->
+          <strong>[XX € Erwachsene / XX € Jugendliche]</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Spiellokal</td>
+        <td>
+          <!-- ✏️ -->
+          <strong>[Gaststätte / Vereinslokal eintragen]</strong>
+          <span>[Straße und Hausnummer], 91452 Wilhermsdorf</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Kontakt</td>
+        <td>
+          <!-- ✏️ -->
+          <strong>[Ansprechperson eintragen]</strong>
+          <span><a href="mailto:">[E-Mail eintragen]</a></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section" id="mitglied">
+    <h2 class="section-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+      Mitglied werden
+    </h2>
+    <p>
+      Wer den Schachfreunden Wilhermsdorf beitreten möchte, kann einfach beim Spielabend
+      vorbeikommen oder sich per E-Mail melden. Vorkenntnisse sind keine Voraussetzung &mdash;
+      wir freuen uns über jeden, der Schach liebt oder kennenlernen möchte.
+    </p>
+    <p>
+      <!-- ✏️ BEITRITTSMODALITÄTEN EINTRAGEN -->
+      [Weitere Informationen zum Beitritt, Aufnahmeantrag etc. hier eintragen.]
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p>Schachfreunde Wilhermsdorf &nbsp;&middot;&nbsp; Teil der SG Langenzenn / Wilhermsdorf</p>
+  <p style="margin-top:0.3rem;">
+    <a href="index.html">← Zurück zur Hauptseite</a>
+    &nbsp;&middot;&nbsp;
+    <a href="#impressum">Impressum</a> &nbsp;&middot;&nbsp; <a href="#datenschutz">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>
