@@ -601,23 +601,22 @@ async function ladeTermine() {
     const termine = [];
 
     for (const zeile of zeilen) {
-      // CSV-Felder: datum_von,datum_bis,tag_anzeige,titel,ort,link_url,link_text
+      // CSV-Felder: datum,titel,ort,link_url,link_text
       const felder = zeile.split(',').map(s => s.trim().replace(/^"|"$/g, ''));
-      if (felder.length < 4 || !felder[0]) continue;
+      if (felder.length < 2 || !felder[0]) continue;
 
-      const [datumVon, datumBis, tagAnzeige, titel, ort, linkUrl, linkText] = felder;
+      const [datum, titel, ort, linkUrl, linkText] = felder;
 
-      // Enddatum für Filterung: datum_bis falls vorhanden, sonst datum_von
-      const endDatumStr = datumBis || datumVon;
-      const endDatum = new Date(endDatumStr);
-      endDatum.setHours(23,59,59,999);
-      if (endDatum < heute) continue; // vergangen → überspringen
+      // TT.MM.JJJJ → Date-Objekt
+      const [tt, mm, jjjj] = datum.split('.');
+      const startDatum = new Date(jjjj, mm - 1, tt);
+      startDatum.setHours(23,59,59,999);
+      if (startDatum < heute) continue; // vergangen → überspringen
 
-      // Monatsanzeige aus datum_von
-      const startDatum = new Date(datumVon);
+      const tag = tt.replace(/^0/, '') + '.';
       const monat = MONATE[startDatum.getMonth()];
 
-      termine.push({ tagAnzeige, monat, titel, ort, linkUrl, linkText, startDatum });
+      termine.push({ tag, monat, titel, ort, linkUrl, linkText, startDatum });
     }
 
     // Chronologisch sortieren
@@ -635,7 +634,7 @@ async function ladeTermine() {
       const ortHtml = t.ort ? `<span>${t.ort}</span>` : '';
       return `<li>
           <div class="termin-date">
-            <span class="td-day">${t.tagAnzeige}</span>
+            <span class="td-day">${t.tag}</span>
             <span class="td-mon">${t.monat}</span>
           </div>
           <div class="termin-info">
