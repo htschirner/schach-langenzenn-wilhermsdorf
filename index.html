@@ -60,8 +60,8 @@ header {
 
 .logo-icon {
   flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -70,32 +70,35 @@ header {
 
 .site-title .name {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .site-title .sub {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   opacity: 0.8;
   letter-spacing: 0.04em;
   margin-top: 2px;
+  white-space: nowrap;
 }
 
-nav { display: flex; align-items: stretch; }
+nav { display: flex; align-items: stretch; white-space: nowrap; flex-shrink: 0; }
 
 nav a {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 0.75rem;
   color: rgba(255,255,255,0.88);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   border-bottom: 3px solid transparent;
   margin-bottom: -3px;
   transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
 }
 
 nav a:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
@@ -276,6 +279,8 @@ aside { display: flex; flex-direction: column; gap: 1.5rem; }
 .widget-body p:last-child { margin-bottom: 0; }
 .widget-body a { color: var(--accent); text-decoration: none; }
 .widget-body a:hover { text-decoration: underline; }
+.contact-list a { color: inherit; }
+.contact-list a:hover { text-decoration: none; }
 
 .contact-list { list-style: none; }
 .contact-list li {
@@ -323,7 +328,7 @@ footer a:hover { color: #fff; }
   <div class="header-inner">
     <a href="#" class="site-title">
       <div class="logo-icon" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="100%" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
           <rect x="0"  y="0"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
           <rect x="9"  y="0"  width="9" height="9" fill="rgba(255,255,255,0.18)"/>
           <rect x="18" y="0"  width="9" height="9" fill="rgba(255,255,255,0.85)"/>
@@ -423,14 +428,19 @@ footer a:hover { color: #fff; }
           <td>
             <strong>Jeden Freitag ab 19:30 Uhr</strong>
             <span>Das ganze Jahr über, auch außerhalb der Ligasaison<p>Ausnahmen: Feiertage und Spieltage der 
-			Mannschaftswettbewerbe</span>
+            Mannschaftswettbewerbe</span>
           </td>
         </tr>
         <tr>
           <td>Wo</td>
           <td>
             <strong>Evangelische Gemeinschaft</strong>
-            <span>Bergstraße 13, 91452 Wilhermsdorf</span>
+            <span>Bergstraße 13, 91452 Wilhermsdorf<p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Bergstra%C3%9Fe+13%2C+91452+Wilhermsdorf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.4rem;font-size:0.82rem;color:var(--accent);text-decoration:none;font-weight:600;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Anfahrt (Google Maps)
+              </a>
+            </span>
           </td>
         </tr>
         <tr>
@@ -481,7 +491,7 @@ footer a:hover { color: #fff; }
   <aside>
 
     <div class="widget">
-      <div class="widget-title">Kontakt</div>
+      <div class="widget-title">Kontakt Wilhermsdorf</div>
       <div class="widget-body" style="padding:0.75rem 1rem;">
         <ul class="contact-list">
           <li>
@@ -495,18 +505,29 @@ footer a:hover { color: #fff; }
           <li>
             <span class="cl-label">E-Mail</span>
             <span class="cl-val" style="font-weight:400;font-size:0.84rem;">
-              <a id="mail-link-wk" href="#"/>
+              <a id="mail-link-wilhermsdorf" href="#"/>
             </span>
           </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-title">Kontakt Langenzenn</div>
+      <div class="widget-body" style="padding:0.75rem 1rem;">
+        <ul class="contact-list">
           <li>
-            <span class="cl-label">Spielort</span>
-            <span class="cl-val" style="font-size:0.88rem;font-weight:400;">
-              Evangelische Gemeinschaft, Bergstr. 13, 91452 Wilhermsdorf
-              <br>
-              <a href="https://www.google.com/maps/search/?api=1&query=Bergstra%C3%9Fe+13%2C+91452+Wilhermsdorf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.4rem;font-size:0.82rem;color:var(--accent);text-decoration:none;font-weight:600;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-                Anfahrt (Google Maps)
-              </a>
+            <span class="cl-label">Ansprechperson</span>
+            <span class="cl-val">Michael Jagla</span>
+          </li>
+          <li>
+            <span class="cl-label">Telefon</span>
+            <span class="cl-val">09101-1605</span>
+          </li>
+          <li>
+            <span class="cl-label">E-Mail</span>
+            <span class="cl-val" style="font-weight:400;font-size:0.84rem;">
+              <a id="mail-link-langenzenn" href="#"/>
             </span>
           </li>
         </ul>
@@ -543,7 +564,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 (function(){
   const u = 'werner.kaeferlein', d = 't-online.de';
-  const a = document.getElementById('mail-link-wk');
+  const a = document.getElementById('mail-link-wilhermsdorf');
+  if (a) {
+    a.href = 'mailto:' + u + '@' + d;
+    a.textContent = u + '@' + d;
+  }
+})();
+
+(function(){
+  const u = 'sk1948langenzenn', d = 'freenet.de';
+  const a = document.getElementById('mail-link-langenzenn');
   if (a) {
     a.href = 'mailto:' + u + '@' + d;
     a.textContent = u + '@' + d;
