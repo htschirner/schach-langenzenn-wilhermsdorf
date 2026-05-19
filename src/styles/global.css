@@ -1,0 +1,365 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:           #f8f6f2;
+  --white:        #ffffff;
+  --text:         #1e1c1a;
+  --muted:        #5a5650;
+  --border:       #ddd9d3;
+  --accent:       #2a5c8a;
+  --accent-light: #e8f0f7;
+  --gold:         #8a6a2a;
+  --radius:       6px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* HEADER */
+header {
+  background: var(--accent);
+  color: #fff;
+  border-bottom: 3px solid var(--gold);
+}
+
+.header-inner {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.site-title-text { display: flex; flex-direction: column; }
+
+.site-title .name {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.site-title .sub {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+nav { display: flex; align-items: stretch; white-space: nowrap; flex-shrink: 0; }
+
+nav a {
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  color: rgba(255,255,255,0.88);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+nav a:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s;
+}
+.back-link:hover { color: #fff; }
+
+/* CONTENT LAYOUTS */
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 1.75rem;
+  padding: 1.75rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem;
+}
+
+main { min-width: 0; }
+
+/* SECTIONS */
+.section {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.55rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title svg { flex-shrink: 0; opacity: 0.65; }
+
+.section p { color: var(--muted); margin-bottom: 0.75rem; }
+.section p:last-child { margin-bottom: 0; }
+.section a { color: var(--accent); }
+
+.section h3 {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.25rem 0 0.4rem;
+}
+.section h3:first-of-type { margin-top: 0; }
+
+.info-box {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.9rem 1.1rem;
+  margin: 1rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.info-box p { color: var(--text); margin: 0; font-size: 0.95rem; }
+.info-box strong { color: var(--accent); }
+
+.info-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.info-table tr { border-bottom: 1px solid var(--border); }
+.info-table tr:last-child { border-bottom: none; }
+.info-table td { padding: 0.65rem 0; vertical-align: top; font-size: 0.95rem; }
+.info-table td:first-child {
+  color: var(--muted);
+  width: 130px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-right: 1rem;
+  padding-top: 0.8rem;
+}
+.info-table td strong { display: block; color: var(--text); font-weight: 600; }
+.info-table td span { font-size: 0.88rem; color: var(--muted); }
+
+/* VEREINE */
+.verein-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.verein-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.verein-box:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(42,92,138,0.1);
+}
+
+.verein-box h3 {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.verein-box h3 .link-arrow {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.verein-box:hover h3 .link-arrow {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.verein-box p { font-size: 0.88rem; color: var(--muted); margin: 0; }
+
+/* TERMINE */
+.termine-list { list-style: none; margin-top: 0.25rem; }
+
+.termine-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.termine-list li:last-child { border-bottom: none; }
+
+.termin-date {
+  flex-shrink: 0;
+  text-align: center;
+  background: var(--accent-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.25rem 0.6rem;
+  width: 80px;
+}
+
+.termin-date .td-day {
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.termin-date .td-mon {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.termin-info { text-align: left; }
+.termin-info strong { display: block; color: var(--text); font-weight: 600; }
+.termin-info span { display: block; font-size: 0.88rem; color: var(--muted); }
+
+/* SIDEBAR */
+aside { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.widget {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.widget-title {
+  background: var(--accent);
+  color: #fff;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  letter-spacing: 0.02em;
+}
+
+.widget-body { padding: 1rem; }
+.widget-body p { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.4rem; }
+.widget-body p:last-child { margin-bottom: 0; }
+.widget-body a { color: var(--accent); text-decoration: none; }
+.widget-body a:hover { text-decoration: underline; }
+
+.contact-list { list-style: none; }
+.contact-list a { color: inherit; }
+.contact-list a:hover { text-decoration: none; }
+
+.contact-list li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+.contact-list li:last-child { border-bottom: none; }
+
+.contact-list .cl-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gold);
+  margin-bottom: 1px;
+}
+.contact-list .cl-val { color: var(--text); font-weight: 600; }
+
+/* IMPRESSUM */
+.placeholder {
+  background: #fff8e1;
+  border: 1px dashed #c8a000;
+  border-radius: 3px;
+  padding: 0 0.35em;
+  color: #7a5c00;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background: #2a2724;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+footer a:hover { color: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .page-grid { grid-template-columns: 1fr; padding: 1rem; }
+  .page-wrap { padding: 1rem; }
+  .header-inner { flex-direction: column; gap: 0; padding: 0 1rem; }
+  nav { flex-wrap: wrap; margin-bottom: 0.5rem; }
+  nav a { padding: 0.4rem 0.6rem; font-size: 0.82rem; }
+  .verein-cols { grid-template-columns: 1fr; }
+  .section { padding: 1.1rem 1.25rem; }
+  .logo-icon { width: 36px; height: 36px; }
+  .site-title .name { font-size: 1.1rem; white-space: normal; }
+  .site-title .sub { font-size: 0.75rem; white-space: normal; }
+  .site-title { padding: 0.75rem 0; }
+}

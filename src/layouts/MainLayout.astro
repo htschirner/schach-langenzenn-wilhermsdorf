@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import ChessLogo from '../components/ChessLogo.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-inner" style="max-width:1000px">
+    <a href="/" class="site-title">
+      <div class="logo-icon" aria-hidden="true">
+        <ChessLogo />
+      </div>
+      <div class="site-title-text">
+        <span class="name">SG Langenzenn / Wilhermsdorf</span>
+        <span class="sub">SK 1948 Langenzenn &#9822; Schachfreunde Wilhermsdorf</span>
+      </div>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#willkommen">Willkommen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#spielabend">Spielabend</a>
+      <a href="#mannschaft">Mannschaft</a>
+      <a href="#termine">Termine</a>
+    </nav>
+  </div>
+</header>
+
+<slot />
+
+<footer>
+  <p>SG Langenzenn/Wilhermsdorf &nbsp;&middot;&nbsp; SK 1948 Langenzenn &#9822; Schachfreunde Wilhermsdorf</p>
+  <p style="margin-top:0.3rem;">
+    <a href="/impressum-datenschutz">Impressum</a> &nbsp;&middot;&nbsp;
+    <a href="/impressum-datenschutz#datenschutz">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>
