@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { getTermine } from '../lib/termine';
 
 const termine = getTermine();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <MainLayout title="SG Langenzenn/Wilhermsdorf">
 
@@ -43,11 +44,11 @@ const termine = getTermine();
       </p>
 
       <div class="verein-cols">
-        <a href="/verein-langenzenn.html" target="_blank" class="verein-box">
+        <a href={`${base}/verein-langenzenn.html`} target="_blank" class="verein-box">
           <h3>SK 1948 Langenzenn <span class="link-arrow">&#8599;</span></h3>
           <p>Gegründet 1948. Der Schachklub ist seit Jahrzehnten ein fester Teil des Vereinslebens in der Stadt Langenzenn.</p>
         </a>
-        <a href="/verein-wilhermsdorf.html" target="_blank" class="verein-box">
+        <a href={`${base}/verein-wilhermsdorf.html`} target="_blank" class="verein-box">
           <h3>Schachfreunde Wilhermsdorf <span class="link-arrow">&#8599;</span></h3>
           <p>Die Schachfreunde Wilhermsdorf stehen für das Schachspiel im Markt Wilhermsdorf und der Umgebung.</p>
         </a>
