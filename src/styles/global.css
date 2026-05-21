@@ -374,7 +374,7 @@ footer a:hover { color: #fff; }
 .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* RESPONSIVE */
-@media (max-width: 680px) {
+@media (max-width: 960px) {
   .page-grid { grid-template-columns: 1fr; padding: 1rem; }
   .page-wrap { padding: 1rem; }
   .header-inner { flex-wrap: wrap; gap: 0; padding: 0 1rem; align-items: center; }
