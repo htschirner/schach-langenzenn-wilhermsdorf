@@ -50,12 +50,13 @@ export function getTermine(): Termin[] {
     startDatum.setHours(23, 59, 59, 999);
     if (startDatum < heute) continue;
 
+    const safeUrl = /^https?:\/\//i.test(linkUrl) ? linkUrl : '';
     termine.push({
       tag: tt.replace(/^0/, '') + '.',
       monat: MONATE[startDatum.getMonth()],
       titel,
       ort,
-      linkUrl,
+      linkUrl: safeUrl,
       linkText,
       datum: startDatum,
     });
