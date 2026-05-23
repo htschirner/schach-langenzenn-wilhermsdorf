@@ -28,7 +28,7 @@ import SubLayout from '../layouts/SubLayout.astro';
     <h3>Kontakt</h3>
     <p>
       Telefon: <span class="placeholder">0XXXX XXXXXX</span><br>
-      E-Mail: <a href="mailto:"><span class="placeholder">email@beispiel.de</span></a>
+      E-Mail: <a id="mail-impressum" href="#"></a>
     </p>
 
     <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
@@ -38,42 +38,6 @@ import SubLayout from '../layouts/SubLayout.astro';
       <span class="placeholder">PLZ Ort</span>
     </p>
 
-    <h3>Haftung für Inhalte</h3>
-    <p>
-      Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den
-      allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-      verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-      zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-    </p>
-    <p>
-      Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
-      Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
-      Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden
-      Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
-    </p>
-
-    <h3>Haftung für Links</h3>
-    <p>
-      Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-      Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-      verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
-      verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
-      Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-    </p>
-    <p>
-      Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
-      einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
-      derartige Links umgehend entfernen.
-    </p>
-
-    <h3>Urheberrecht</h3>
-    <p>
-      Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-      Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-      Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
-      Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
-      gestattet.
-    </p>
   </div>
 
   <!-- DATENSCHUTZ -->
@@ -96,7 +60,7 @@ import SubLayout from '../layouts/SubLayout.astro';
       <span class="placeholder">Vorname Nachname</span><br />
       <span class="placeholder">Straße und Hausnummer</span><br />
       <span class="placeholder">PLZ Ort</span><br />
-      E-Mail: <a href="mailto:"><span class="placeholder">email@beispiel.de</span></a>
+      E-Mail: <a id="mail-datenschutz" href="#"></a>
     </p>
 
     <h3>3. Datenerfassung auf dieser Website</h3>
@@ -127,17 +91,15 @@ import SubLayout from '../layouts/SubLayout.astro';
 
     <h3>5. Ihre Rechte</h3>
     <p>
-      Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer
-      gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung
-      oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt
-      haben, können Sie diese Einwilligung jederzeit für die Zukunft widerrufen. Außerdem haben Sie das
-      Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen
-      Daten zu verlangen.
+      Da diese Website selbst keine personenbezogenen Daten erhebt oder speichert, fallen Auskunfts-,
+      Berichtigungs- und Löschungsansprüche gegenüber uns inhaltlich leer aus. Die einzigen technisch
+      anfallenden Daten sind Server-Logfiles des Hosting-Anbieters GitHub Inc. — für Anfragen dazu
+      wenden Sie sich bitte direkt an GitHub über deren
+      <a href="https://support.github.com/contact/privacy" target="_blank" rel="noopener">Datenschutz-Kontaktformular</a>.
     </p>
     <p>
-      Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
-      Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige
-      Aufsichtsbehörde in Bayern ist das Bayerische Landesamt für Datenschutzaufsicht (BayLDA),
+      Bei Fragen zum Datenschutz können Sie sich außerdem an die zuständige Aufsichtsbehörde wenden:
+      Bayerisches Landesamt für Datenschutzaufsicht (BayLDA),
       Promenade 18, 91522 Ansbach, <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>.
     </p>
 
@@ -151,5 +113,17 @@ import SubLayout from '../layouts/SubLayout.astro';
   </div>
 
 </div>
+
+<script is:inline>
+(function(){
+  var u = 'werner.kaeferlein', d = 't-online.de';
+  var addr = 'mailto:' + u + '@' + d;
+  var text = u + '@' + d;
+  ['mail-impressum', 'mail-datenschutz'].forEach(function(id) {
+    var a = document.getElementById(id);
+    if (a) { a.href = addr; a.textContent = text; }
+  });
+})();
+</script>
 
 </SubLayout>
