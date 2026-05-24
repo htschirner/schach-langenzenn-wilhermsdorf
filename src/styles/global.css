@@ -235,6 +235,20 @@ main { min-width: 0; }
 
 .verein-box p { font-size: 0.88rem; color: var(--muted); margin: 0; }
 
+/* MANNSCHAFT */
+.aufstellung-list { margin: 0.25rem 0 1rem 1.2rem; padding: 0; font-size: 0.95rem; }
+.aufstellung-list li { padding: 0.15rem 0; }
+
+.ergebnisse-table { width: 100%; border-collapse: collapse; margin: 0.25rem 0 1rem; font-size: 0.9rem; }
+.ergebnisse-table thead tr { background: var(--accent); color: #fff; }
+.ergebnisse-table th { padding: 0.45rem 0.6rem; text-align: center; font-weight: 600; white-space: nowrap; }
+.ergebnisse-table th:nth-child(3) { text-align: left; }
+.ergebnisse-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); }
+.ergebnisse-table tbody tr:last-child td { border-bottom: none; }
+.ergebnisse-table tbody tr:nth-child(even) { background: #f5f0e8; }
+.ergebnisse-table td { text-align: center; white-space: nowrap; }
+.ergebnisse-table td:nth-child(3) { text-align: left; white-space: normal; }
+
 /* TERMINE */
 .termine-list { list-style: none; margin-top: 0.25rem; }
 
