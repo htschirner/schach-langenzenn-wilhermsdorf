@@ -20,11 +20,14 @@ import SubLayout from '../layouts/SubLayout.astro';
       und ist seitdem ein fester Teil des Vereinslebens in der Stadt Langenzenn.
     </p>
 
-
-    <table class="info-table">
+    <div class="wappen-row">
+      <table class="info-table">
       <tr>
         <td>Gegründet</td>
-        <td><strong>1948</strong></td>
+        <td>
+          <strong>09.02.1948</strong>, danach für über 40 JahreAbteilung des TSV Langenzenn, am 
+          <strong>09.06.1989</strong> Gründung des SK 1948 Langenzenn
+        </td>
       </tr>
       <tr>
         <td>Sitz</td>
@@ -41,6 +44,14 @@ import SubLayout from '../layouts/SubLayout.astro';
         </td>
       </tr>
     </table>
+      <img
+        class="verein-wappen"
+        src="/schach-langenzenn-wilhermsdorf/wappen-langenzenn.svg"
+        alt="Stadtwappen Langenzenn"
+        width="90"
+        height="120"
+      />
+    </div>
   </div>
 
   <div class="section" id="geschichte">
@@ -48,9 +59,30 @@ import SubLayout from '../layouts/SubLayout.astro';
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
       Vereinsgeschichte
     </h2>
-    <p>
-      [Hier kann die Geschichte des SK 1948 Langenzenn eingetragen werden.]
-    </p>
+    <p>Zum 50-jährigen Jubiläum des Schachklubs im Jahr 1998:</p>
+    <blockquote class="article-quote">
+      [Zitattext hier einfügen]
+      <cite>[Quelle: Zeitungsname, Datum]</cite>
+    </blockquote>
+
+    <div class="image-gallery">
+      <button onclick="document.getElementById('lightbox').showModal(); document.getElementById('lightbox-img').src=this.querySelector('img').src">
+        <img
+          src="/schach-langenzenn-wilhermsdorf/langenzenn-stammrolle-1.webp"
+          alt="Stammrolle SK 1948 Langenzenn (Seite 1)"
+        />
+      </button>
+      <button onclick="document.getElementById('lightbox').showModal(); document.getElementById('lightbox-img').src=this.querySelector('img').src">
+        <img
+          src="/schach-langenzenn-wilhermsdorf/langenzenn-stammrolle-2.webp"
+          alt="Stammrolle SK 1948 Langenzenn (Seite 2)"
+        />
+      </button>
+    </div>
+
+    <dialog id="lightbox" class="lightbox" onclick="this.close()">
+      <img id="lightbox-img" src="" alt="Vergrößerte Ansicht" />
+    </dialog>
   </div>
 
 </div>
