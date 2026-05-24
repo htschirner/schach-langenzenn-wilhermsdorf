@@ -427,6 +427,48 @@ aside { display: flex; flex-direction: column; gap: 1.5rem; }
   font-style: italic;
 }
 
+/* BERICHTE */
+.bericht-article + .bericht-article {
+  border-top: 2px solid var(--border);
+  padding-top: 1.5rem;
+  margin-top: 0;
+}
+
+.bericht-titel {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.bericht-meta {
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.bericht-inhalt p { color: var(--muted); margin-bottom: 0.75rem; }
+.bericht-inhalt p:last-child { margin-bottom: 0; }
+.bericht-inhalt h1, .bericht-inhalt h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.25rem 0 0.4rem;
+}
+.bericht-inhalt h3 {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1rem 0 0.3rem;
+}
+.bericht-inhalt ul, .bericht-inhalt ol { margin: 0.5rem 0 0.75rem 1.5rem; }
+.bericht-inhalt li { color: var(--muted); margin-bottom: 0.2rem; }
+.bericht-inhalt a { color: var(--accent); }
+.bericht-inhalt strong { color: var(--text); font-weight: 600; }
+
 /* FOOTER */
 footer {
   background: #2a2724;

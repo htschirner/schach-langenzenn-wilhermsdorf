@@ -1,0 +1,30 @@
+---
+import SubLayout from '../layouts/SubLayout.astro';
+import { getBerichte } from '../lib/berichte';
+
+const berichte = await getBerichte();
+---
+<SubLayout
+  title="Berichte – SG Langenzenn/Wilhermsdorf"
+  logoName="SG Langenzenn / Wilhermsdorf"
+  logoSub="SK 1948 Langenzenn ♞ Schachfreunde Wilhermsdorf"
+  footerText="SG Langenzenn/Wilhermsdorf · SK 1948 Langenzenn ♞ Schachfreunde Wilhermsdorf"
+>
+<div class="page-wrap">
+
+  {berichte.length === 0 ? (
+    <div class="section">
+      <p style="color:var(--muted);">Noch keine Berichte vorhanden.</p>
+    </div>
+  ) : (
+    berichte.map((b) => (
+      <article class="section bericht-article">
+        <h2 class="bericht-titel">{b.titel}</h2>
+        <p class="bericht-meta">{b.datum}{b.autor ? ` · ${b.autor}` : ''}</p>
+        <div class="bericht-inhalt" set:html={b.inhalt} />
+      </article>
+    ))
+  )}
+
+</div>
+</SubLayout>
