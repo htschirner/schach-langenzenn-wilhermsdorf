@@ -1,6 +1,3 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-
 export interface Termin {
   tag: string;
   monat: string;
@@ -34,8 +31,12 @@ function parseCSVLine(line: string): string[] {
   return fields;
 }
 
-export function getTermine(): Termin[] {
-  const csv = readFileSync(join(process.cwd(), 'termine.csv'), 'utf-8');
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1iyj-v-hL2WlCWk5GUCAM_ZucjrTi-YPsWqe3K8NDECk/export?format=csv';
+
+export async function getTermine(): Promise<Termin[]> {
+  const res = await fetch(SHEET_URL);
+  if (!res.ok) throw new Error(`Termine konnten nicht geladen werden: ${res.status}`);
+  const csv = await res.text();
   const heute = new Date();
   heute.setHours(0, 0, 0, 0);
 
