@@ -318,12 +318,12 @@ dialog.lightbox img {
 .data-table { width: 100%; border-collapse: collapse; margin: 0.25rem 0 1rem; font-size: 0.9rem; }
 .data-table thead tr { background: var(--accent); color: #fff; }
 .data-table th { padding: 0.45rem 0.6rem; text-align: center; font-weight: 600; white-space: nowrap; }
-.data-table th:nth-child(3) { text-align: left; }
+.data-table th:nth-child(2) { text-align: left; }
 .data-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); }
 .data-table tbody tr:last-child td { border-bottom: none; }
 .data-table tbody tr:nth-child(even) { background: #f5f0e8; }
 .data-table td { text-align: center; white-space: nowrap; }
-.data-table td:nth-child(3) { text-align: left; white-space: normal; }
+.data-table td:nth-child(2) { text-align: left; white-space: normal; }
 
 /* TERMINE */
 .termine-list { list-style: none; margin-top: 0.25rem; }
@@ -524,4 +524,7 @@ footer a:hover { color: #fff; }
   .verein-wappen { width: 70px; }
   .image-gallery { grid-template-columns: 1fr; }
   .section { padding: 1.1rem 1.25rem; }
+  .data-table { font-size: 0.82rem; }
+  .data-table th { white-space: normal; }
+  .data-table th, .data-table td { padding: 0.35rem 0.5rem; }
 }
