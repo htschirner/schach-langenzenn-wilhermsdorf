@@ -239,7 +239,7 @@ main { min-width: 0; }
 .aufstellung-list { margin: 0.25rem 0 1rem 1.2rem; padding: 0; font-size: 0.95rem; }
 .aufstellung-list li { padding: 0.15rem 0; }
 .aufstellung-table td:nth-child(1) { width: 2.5rem; text-align: center; }
-.aufstellung-table td:nth-child(2) { text-align: left; white-space: normal; }
+.aufstellung-table td:nth-child(2), .aufstellung-table th:nth-child(2) { text-align: left; white-space: normal; }
 
 .data-table { width: 100%; border-collapse: collapse; margin: 0.25rem 0 1rem; font-size: 0.9rem; }
 .data-table thead tr { background: var(--accent); color: #fff; }
