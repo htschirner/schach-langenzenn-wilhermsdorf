@@ -465,6 +465,7 @@ aside { display: flex; flex-direction: column; gap: 1.5rem; }
   margin: 1rem 0 0.3rem;
 }
 .bericht-inhalt ul, .bericht-inhalt ol { margin: 0.5rem 0 0.75rem 1.5rem; }
+.section-list { margin: 0.25rem 0 0.5rem 1.5rem; }
 .bericht-inhalt li { color: var(--muted); margin-bottom: 0.2rem; }
 .bericht-inhalt a { color: var(--accent); }
 .bericht-inhalt strong { color: var(--text); font-weight: 600; }
