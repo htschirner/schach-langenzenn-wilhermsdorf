@@ -71,6 +71,22 @@ import SubLayout from '../layouts/SubLayout.astro';
       <li>Gerhard Tobisch, Langenzenn</li>
       <li>Peter Tobisch, Fürth</li>
     </ul>
+
+    <p>
+      Am 15.7.1994 trat der tschechische Großmeister <a href="https://de.wikipedia.org/wiki/Vlastimil_Hort" target="_blank" rel="noopener">Vlastimil Hort</a> anlässlich des 10-jährigen Bestehens zu einem Simultan-Turnier in Wilhermsdorf an:
+    </p>
+    <div class="image-gallery">
+      <button onclick="document.getElementById('lightbox-wilhermsdorf').showModal(); document.getElementById('lightbox-wilhermsdorf-img').src=this.querySelector('img').src">
+        <img
+          src="/schach-langenzenn-wilhermsdorf/10-jahre-sf-wilhermsdorf.webp"
+          alt="Simultan-Turnier mit Vlastimil Hort, 10 Jahre SF Wilhermsdorf, 1994"
+        />
+      </button>
+    </div>
+
+    <dialog id="lightbox-wilhermsdorf" class="lightbox" onclick="this.close()">
+      <img id="lightbox-wilhermsdorf-img" src="" alt="Vergrößerte Ansicht" />
+    </dialog>
   </div>
 
 </div>
