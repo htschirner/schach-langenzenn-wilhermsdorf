@@ -57,8 +57,9 @@ import SubLayout from '../layouts/SubLayout.astro';
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
       Vereinsgeschichte
     </h2>
+    <h3 class="subsection-title">Gründung</h3>
     <p>
-      Bei der Gründungsversammlung des "Schachclub Wilhermsdorf" am 04.05.1984 wurde der Verein laut Protokoll von 
+      Bei der Gründungsversammlung des "Schachclub Wilhermsdorf" am 04.05.1984 wurde der Verein laut Protokoll von
       folgenden acht Gründungsmitgliedern ins Leben gerufen:
     </p>
     <ul class="section-list">
@@ -72,6 +73,26 @@ import SubLayout from '../layouts/SubLayout.astro';
       <li>Peter Tobisch, Fürth</li>
     </ul>
 
+    <h3 class="subsection-title">Schachquiz</h3>
+    <p>
+      Im Jahr 1986 veranstalteten die Schachfreunde Wilhermsdorf das folgende kleine Quiz. Während die ersten vier Fragen für die 
+      meisten vermutlich noch recht leicht zu schaffen waren, dürften an der letzten Frage viele Wilhermsdorfer und Wilhermsdorferinnen 
+      verzweifelt sein (die exakte Antwort lautet übrigens 197.281). 
+    </p>
+    <div class="image-gallery">
+      <button onclick="document.getElementById('lightbox-quiz-1986').showModal(); document.getElementById('lightbox-quiz-1986-img').src=this.querySelector('img').src">
+        <img
+          src="/schach-langenzenn-wilhermsdorf/sfw-quiz-1986.webp"
+          alt="Schach-Quiz der Schachfreunde Wilhermsdorf, 1986"
+        />
+      </button>
+    </div>
+
+    <dialog id="lightbox-quiz-1986" class="lightbox" onclick="this.close()">
+      <img id="lightbox-quiz-1986-img" src="" alt="Vergrößerte Ansicht" />
+    </dialog>
+
+    <h3 class="subsection-title">Simultan mit GM Hort</h3>
     <p>
       Am 15.7.1994 trat der tschechische Großmeister <a href="https://de.wikipedia.org/wiki/Vlastimil_Hort" target="_blank" rel="noopener">Vlastimil Hort</a> anlässlich des 10-jährigen Bestehens der Schachfreunde zu einem Simultan-Turnier in Wilhermsdorf an:
     </p>
