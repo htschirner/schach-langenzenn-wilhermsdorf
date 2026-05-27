@@ -16,8 +16,8 @@ import SubLayout from '../layouts/SubLayout.astro';
       SK 1948 Langenzenn
     </h2>
     <p>
-      1948 gegründet, von 1948 bis 1989 Schachabteilung des TSV Langenzenn,
-      seit 1989 eigenständiger Verein. Seitdem verwendet der Verein das Stadtwappen von Langenzenn als Vereinslogo.
+      1948 gegründet, dann Schachabteilung des TSV Langenzenn,
+      seit 1989 eigenständiger Verein. Seit 17.06.1995 Teil der SG Langenzenn/Wilhermsdorf.
     </p>
 
     <div class="wappen-row">
@@ -90,7 +90,83 @@ import SubLayout from '../layouts/SubLayout.astro';
     </dialog>
   </div>
 
+  <div class="section" id="vereinsmeister">
+    <h2 class="section-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+      Vereinsmeister
+    </h2>
+    <p>Vereinsmeister des SK 1948 Langenzenn seit 1965:</p>
+    <table class="meister-table">
+      <thead>
+        <tr><th>Jahr</th><th>Vereinsmeister</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1965</td><td>Werner Wüstendorfer</td></tr>
+        <tr><td>1966</td><td>Werner Wüstendorfer</td></tr>
+        <tr><td>1967</td><td>Werner Wüstendorfer</td></tr>
+        <tr><td>1968</td><td>Gerfried Wenzel</td></tr>
+        <tr><td>1969</td><td>Manfred Ströbel</td></tr>
+        <tr><td>1970</td><td>Friedrich Schmidt</td></tr>
+        <tr><td>1971</td><td>Werner Wüstendorfer</td></tr>
+        <tr><td>1972</td><td>Johann Steinmetz</td></tr>
+        <tr><td>1973</td><td>Johann Steinmetz</td></tr>
+        <tr><td>1974</td><td>Johann Steinmetz</td></tr>
+        <tr><td>1975</td><td>Friedrich Schmidt</td></tr>
+        <tr><td>1976</td><td>Johann Steinmetz</td></tr>
+        <tr><td>1977</td><td>Josef Mate</td></tr>
+        <tr><td>1978</td><td>Johann Steinmetz / Franz Leipold</td></tr>
+        <tr><td>1979</td><td>Johann Steinmetz</td></tr>
+        <tr><td>1980</td><td>Michael Jagla</td></tr>
+        <tr><td>1981</td><td>Franz Leipold</td></tr>
+        <tr><td>1982</td><td>Michael Jagla</td></tr>
+        <tr><td>1983</td><td>Michael Jagla</td></tr>
+        <tr><td>1984</td><td>Franz Leipold</td></tr>
+        <tr><td>1985</td><td>Franz Leipold</td></tr>
+        <tr><td>1986</td><td>Andreas Maatz</td></tr>
+        <tr><td>1987</td><td>Michael Jagla</td></tr>
+        <tr><td>1988</td><td>Dr. Hans Gerl</td></tr>
+        <tr><td>1989</td><td>Franz Leipold</td></tr>
+        <tr><td>1990</td><td>Burkhard Zühlke</td></tr>
+        <tr><td>1991</td><td>Franz Leipold</td></tr>
+        <tr><td>1992</td><td>Franz Leipold</td></tr>
+        <tr><td>1993</td><td>Franz Leipold</td></tr>
+        <tr><td>1994</td><td>Dieter Eberle</td></tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
+
+<style>
+  .meister-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 420px;
+    font-size: 0.95rem;
+  }
+  .meister-table th {
+    text-align: left;
+    padding: 0.4rem 1rem 0.4rem 0;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-family: 'Lora', serif;
+    font-weight: 600;
+  }
+  .meister-table td {
+    padding: 0.3rem 1rem 0.3rem 0;
+    border-bottom: 1px solid #e0d8cc;
+    vertical-align: top;
+  }
+  .meister-table td:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent);
+    width: 4rem;
+  }
+  .meister-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+</style>
 
 <script is:inline>
 (function(){
