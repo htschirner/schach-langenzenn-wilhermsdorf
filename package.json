@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",
+    "@fontsource/eb-garamond": "^5.2.7",
     "@fontsource/lora": "^5.2.8",
     "@fontsource/source-sans-3": "^5.2.9",
     "astro": "^6.3.7",
