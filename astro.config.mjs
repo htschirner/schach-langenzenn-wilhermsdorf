@@ -2,8 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://htschirner.github.io/schach-langenzenn-wilhermsdorf',
-  base: '/schach-langenzenn-wilhermsdorf',
+  site: 'https://www.schach-langenzenn-wilhermsdorf.de',
   build: {
     format: 'file',
   },
