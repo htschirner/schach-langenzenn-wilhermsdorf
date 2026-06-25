@@ -14,6 +14,7 @@ interface Props {
 
 const { title } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const buildDate = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -80,6 +81,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <a href={`${base}/impressum-datenschutz.html`}>Impressum</a> &nbsp;&middot;&nbsp;
     <a href={`${base}/impressum-datenschutz.html#datenschutz`}>Datenschutz</a>
   </p>
+  <p style="margin-top:0.5rem; font-size:0.72rem; opacity:0.5;">Stand: {buildDate}</p>
 </footer>
 
 <script>
