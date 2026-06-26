@@ -38,6 +38,9 @@ function cleanDocHtml(rawHtml: string): string {
     el.remove();
   }
 
+  const firstH1 = body.querySelector('h1');
+  if (firstH1) firstH1.remove();
+
   for (const el of body.querySelectorAll('*')) {
     const isLink = el.tagName === 'A';
     const keep = isLink ? ['href'] : [];
