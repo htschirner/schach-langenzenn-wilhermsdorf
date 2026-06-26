@@ -6,6 +6,17 @@ export interface Bericht {
   titel: string;
   autor: string;
   inhalt: string;
+  slug: string;
+}
+
+function toSlug(datum: string, titel: string): string {
+  const datumPart = datum.replace(/\./g, '-');
+  const titelPart = titel
+    .toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return `${datumPart}-${titelPart}`;
 }
 
 // Nach Anlegen des Berichte-Tabs im Google Sheet hier die URL eintragen:
@@ -78,7 +89,7 @@ export async function getBerichte(): Promise<Bericht[]> {
       if (!docRes.ok) return null;
       const inhalt = cleanDocHtml(await docRes.text());
 
-      return { datum, datumDate, titel, autor, inhalt } as Bericht;
+      return { datum, datumDate, titel, autor, inhalt, slug: toSlug(datum, titel) } as Bericht;
     })
   );
 

@@ -18,7 +18,7 @@ const berichte = await getBerichte();
     </div>
   ) : (
     berichte.map((b) => (
-      <article class="section bericht-article">
+      <article class="section bericht-article" id={b.slug}>
         <h2 class="bericht-titel">{b.titel}</h2>
         <p class="bericht-meta">{b.datum}{b.autor ? ` · ${b.autor}` : ''}</p>
         <div class="bericht-inhalt" set:html={b.inhalt} />
