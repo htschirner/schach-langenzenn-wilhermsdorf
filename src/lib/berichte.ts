@@ -68,7 +68,10 @@ export async function getBerichte(): Promise<Bericht[]> {
       const [tt, mm, jjjj] = datum.split('.');
       const datumDate = new Date(Number(jjjj), Number(mm) - 1, Number(tt));
 
-      const docRes = await fetch(`https://docs.google.com/document/d/${docId.trim()}/export?format=html`);
+      const rawId = docId.trim();
+      const idMatch = rawId.match(/\/d\/([^/]+)/);
+      const resolvedId = idMatch ? idMatch[1] : rawId;
+      const docRes = await fetch(`https://docs.google.com/document/d/${resolvedId}/export?format=html`);
       if (!docRes.ok) return null;
       const inhalt = cleanDocHtml(await docRes.text());
 
