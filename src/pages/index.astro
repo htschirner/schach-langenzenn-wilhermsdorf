@@ -218,9 +218,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         ) : (
           <ul style="list-style:none;padding:0;margin:0 0 0.5rem;">
             {neueste3Berichte.map((b) => (
-              <li style="margin-bottom:0.35rem;">
+              <li style="margin-bottom:0.35rem;font-size:0.85rem;">
                 <a href={`${base}/berichte.html#${b.slug}`} style="font-weight:600;">{b.titel}</a>
-                <span style="font-size:0.85rem;color:var(--muted);"> ({b.datum})</span>
+                <span style="color:var(--muted);"> ({b.datum})</span>
               </li>
             ))}
           </ul>
