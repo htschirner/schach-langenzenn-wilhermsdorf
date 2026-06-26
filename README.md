@@ -35,7 +35,7 @@ Nur Personen, die von Henning Tschirner als **Bearbeiter** eingeladen wurden. Al
 
 ### Wann erscheint der Termin auf der Website?
 
-Sobald Henning den Workflow auf GitHub manuell gestartet hat (siehe unten). Vergangene Termine verschwinden automatisch.
+Sobald Henning den Workflow manuell gestartet hat (siehe „Schritt 3 – Website neu bauen" im Berichte-Abschnitt). Vergangene Termine verschwinden automatisch.
 
 ---
 
@@ -111,10 +111,13 @@ In der nächsten freien Zeile eintragen:
 
 #### Schritt 3 – Website neu bauen
 
-1. **https://github.com/htschirner/schach-langenzenn-wilhermsdorf/actions** öffnen
-2. Links in der Liste auf **„Deploy to GitHub Pages"** klicken
-3. Rechts auf **„Run workflow"** → **„Run workflow"** klicken
-4. Nach etwa 2–3 Minuten ist die Website aktualisiert
+PowerShell öffnen und folgenden Befehl ausführen:
+
+```powershell
+& "C:\Program Files\GitHub CLI\gh.exe" workflow run deploy.yml --repo htschirner/schach-langenzenn-wilhermsdorf
+```
+
+Nach etwa 2–3 Minuten ist die Website aktualisiert.
 
 ---
 
