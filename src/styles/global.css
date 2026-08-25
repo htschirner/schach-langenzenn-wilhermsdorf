@@ -256,6 +256,7 @@ dialog.lightbox {
   border: none;
   max-width: 95vw;
   max-height: 95vh;
+  margin: auto;
 }
 dialog.lightbox::backdrop {
   background: rgba(0,0,0,0.82);
@@ -267,6 +268,17 @@ dialog.lightbox img {
   max-height: 95vh;
   object-fit: contain;
   border-radius: var(--radius);
+}
+dialog.lightbox.lightbox-wappen {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+dialog.lightbox.lightbox-wappen img {
+  width: 260px;
+  max-width: 70vw;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* WAPPEN */
@@ -280,6 +292,18 @@ dialog.lightbox img {
   flex-shrink: 0;
   width: 90px;
   height: auto;
+}
+.wappen-btn {
+  display: block;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  transition: opacity 0.15s;
+}
+.wappen-btn:hover {
+  opacity: 0.85;
 }
 
 /* VEREINE */

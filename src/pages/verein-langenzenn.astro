@@ -44,15 +44,21 @@ import SubLayout from '../layouts/SubLayout.astro';
         </td>
       </tr>
     </table>
-      <img
-        class="verein-wappen"
-        src="/wappen-langenzenn.svg"
-        alt="Stadtwappen Langenzenn"
-        width="90"
-        height="120"
-      />
+      <button class="wappen-btn" onclick="document.getElementById('lightbox-wappen-langenzenn').showModal()" aria-label="Stadtwappen Langenzenn vergrößern">
+        <img
+          class="verein-wappen"
+          src="/wappen-langenzenn.svg"
+          alt="Stadtwappen Langenzenn"
+          width="90"
+          height="120"
+        />
+      </button>
     </div>
   </div>
+
+  <dialog id="lightbox-wappen-langenzenn" class="lightbox lightbox-wappen" onclick="this.close()">
+    <img src="/wappen-langenzenn.svg" alt="Stadtwappen Langenzenn" />
+  </dialog>
 
   <div class="section" id="geschichte">
     <h2 class="section-title">

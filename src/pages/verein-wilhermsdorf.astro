@@ -41,15 +41,21 @@ import SubLayout from '../layouts/SubLayout.astro';
           </td>
         </tr>
       </table>
-      <img
-        class="verein-wappen"
-        src="/wappen-wilhermsdorf.jpg"
-        alt="Wappen Wilhermsdorf"
-        width="90"
-        height="120"
-      />
+      <button class="wappen-btn" onclick="document.getElementById('lightbox-wappen-wilhermsdorf').showModal()" aria-label="Wappen Wilhermsdorf vergrößern">
+        <img
+          class="verein-wappen"
+          src="/wappen-wilhermsdorf.svg"
+          alt="Wappen Wilhermsdorf"
+          width="90"
+          height="120"
+        />
+      </button>
     </div>
   </div>
+
+  <dialog id="lightbox-wappen-wilhermsdorf" class="lightbox lightbox-wappen" onclick="this.close()">
+    <img src="/wappen-wilhermsdorf.svg" alt="Wappen Wilhermsdorf" />
+  </dialog>
 
   <div class="section" id="geschichte">
     <h2 class="section-title">
